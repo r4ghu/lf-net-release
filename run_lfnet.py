@@ -183,11 +183,11 @@ if __name__ == '__main__':
                             help='the number of threads (for dataset)')
 
     io_arg = add_argument_group('In/Out', parser)
-    io_arg.add_argument('--in_dir', type=str, default='./samples',
+    io_arg.add_argument('--in_dir', type=str, default='../../scratch/sfm/data/london_bridge/set_100/',
                             help='input image directory')
     # io_arg.add_argument('--in_dir', type=str, default='./release/outdoor_examples/images/sacre_coeur/dense/images',
     #                         help='input image directory')
-    io_arg.add_argument('--out_dir', type=str, default='./dump_feats',
+    io_arg.add_argument('--out_dir', type=str, default='./dump_feats/london_bridge/set_100/',
                             help='where to save keypoints')
     io_arg.add_argument('--full_output', type=str2bool, default=True,
                             help='dump keypoint image')
@@ -195,7 +195,7 @@ if __name__ == '__main__':
     model_arg = add_argument_group('Model', parser)
     model_arg.add_argument('--model', type=str, default='./release/models/outdoor/',
                             help='model file or directory')
-    model_arg.add_argument('--top_k', type=int, default=500,
+    model_arg.add_argument('--top_k', type=int, default=8000,
                             help='number of keypoints')
     model_arg.add_argument('--max_longer_edge', type=int, default=640,
                             help='resize image (do nothing if max_longer_edge <= 0)')
