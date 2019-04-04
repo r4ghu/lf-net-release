@@ -195,7 +195,7 @@ if __name__ == '__main__':
     model_arg = add_argument_group('Model', parser)
     model_arg.add_argument('--model', type=str, default='./release/models/outdoor/',
                             help='model file or directory')
-    model_arg.add_argument('--top_k', type=int, default=8000,
+    model_arg.add_argument('--top_k', type=int, default=1024,
                             help='number of keypoints')
     model_arg.add_argument('--max_longer_edge', type=int, default=640,
                             help='resize image (do nothing if max_longer_edge <= 0)')
